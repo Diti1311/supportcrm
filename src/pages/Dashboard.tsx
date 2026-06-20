@@ -66,12 +66,6 @@ export function Dashboard() {
   }
 
   loadTickets();
-
-  const interval = setInterval(() => {
-    loadTickets();
-  }, 5000);
-
-  return () => clearInterval(interval);
 }, []);
   const filteredTickets = tickets.filter((ticket) => {
     const matchesSearch =
